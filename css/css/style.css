@@ -824,8 +824,8 @@ a {
   width: 80px;
   text-align: center;
 }
-.contact .form input[type=name],
-.contact .form input[type=email],
+.contact .form input[type=text],
+.contact .form input[type=mail],
 .contact .form textarea {
   width: 100%;
   font-size: 1.6rem;
@@ -835,8 +835,8 @@ a {
           box-shadow: 5px 6px 15px rgba(96, 96, 96, 0.16);
   border-radius: 2px;
 }
-.contact .form input[type=name],
-.contact .form input[type=email] {
+.contact .form input[type=text],
+.contact .form input[type=mail] {
   height: 40px;
 }
 .contact .form textarea {

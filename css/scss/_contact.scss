@@ -138,8 +138,8 @@
       }
     }
 
-    input[type="name"],
-    input[type="email"],
+    input[type="text"],
+    input[type="mail"],
     textarea{
       width: 100%;
       font-size: 1.6rem;
@@ -149,8 +149,8 @@
       border-radius: 2px;
     }
 
-    input[type="name"],
-    input[type="email"]{
+    input[type="text"],
+    input[type="mail"]{
       height: 40px;
     }
 
