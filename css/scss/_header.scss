@@ -1,0 +1,164 @@
+
+.header{
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  background-color: #fff;
+
+  @include mq(sp){
+    height: 60px;
+  }
+
+  &__inner{
+    display: flex;
+    align-items: center;
+    max-width: 1280px;
+    width: 100%;
+    padding: 25px 40px;
+    margin: 0 auto;
+
+    @include mq(sp){
+    padding: 20px 15px;
+    }
+  }
+
+  // Navigation -------------------------
+
+  .nav{
+    margin-left: auto;
+
+    @include mq(sp){
+      display: none;
+    }
+
+    &__list{
+      display: flex;
+      align-items: center;
+    }
+
+    &__item{
+
+      &:not(:first-child){
+        margin-left: 48px;
+      }
+
+      a{
+        color: $txt__main_color;
+        font-size: 1.6rem;
+        letter-spacing: 1.6px;
+
+        &:hover{
+          color: #3EA1D1;
+        }
+      }
+    }
+  }
+
+  // -----------------------------------------
+  // スマホ用ナビゲーション------------------------------
+  // -----------------------------------------
+
+
+
+
+  .sp__nav{
+    width: 300px;
+    right: -300px;
+    background-color: #3EA1D1;
+    padding: 15px;
+    z-index: 9999;
+
+    &_item{
+      display: block;
+      text-transform: capitalize;
+      text-align: right;
+      margin-top: 40px;
+    }
+
+    &_link{
+      display: block;
+      font-size: 2.8rem;
+      letter-spacing: 0.1rem;
+      color: $txt__sub_color;
+    }
+
+  }
+
+
+  //ドロワーボタン ------------------------------
+
+  .drawer-toggle{
+
+    @include mq(pc){
+      display: none;
+
+    }
+  }
+
+    .openbtn1{
+      position: relative;/*ボタン内側の基点となるためrelativeを指定*/
+      cursor: pointer;
+      margin-left: auto;
+      // background: #fff;
+      width: 30px;
+      height: 18px;
+      z-index: 9999;
+
+      @include mq(pc){
+        display: none;
+      }
+    }
+
+    .openbtn1 span{
+      display: inline-block;
+      transition: all .4s;/*アニメーションの設定*/
+      position: absolute;
+      right: 15px;
+      height: 2px;
+      border-radius: 2px;
+      background: #57a2c7;
+      width: 100%;
+    }
+
+    .openbtn1 span:nth-of-type(1) {
+      top:0px;
+    }
+
+    .openbtn1 span:nth-of-type(2) {
+      top:8px;
+    }
+
+    .openbtn1 span:nth-of-type(3) {
+      top:16px;
+    }
+
+    .openbtn1.active span:nth-of-type(1) {
+        // top: 18px;
+        // left: 18px;
+        transform: translateY(10px) rotate(-45deg);
+        width: 100%;
+    }
+
+    .openbtn1.active span:nth-of-type(2) {
+      opacity: 0;/*真ん中の線は透過*/
+    }
+
+    .openbtn1.active span:nth-of-type(3){
+        // top: 30px;
+        // left: 18px;
+        transform: translateY(-6px) rotate(45deg);
+        width: 100%;
+    }
+  }
+
+  .drawer-hamburger{
+    padding: 0;
+  }
+
+  // クリックした時のボタンが右から300px離すための指定
+  .drawer--right.drawer-open .drawer-hamburger{
+    right: 300px;
+  }

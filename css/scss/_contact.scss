@@ -1,0 +1,228 @@
+
+.contact{
+  background: url(/img/PC/contact.png) no-repeat center center;
+  background-size: cover;
+
+  .inner{
+    padding: 57px 27px;
+  }
+
+  .sub__title{
+    h2{
+      color: #3EA1D1;
+    }
+  }
+
+  &__txt{
+    color: $txt__main_color;
+    font-size: 1.4rem;
+    text-align: center;
+
+    span{
+      color: red;
+      font-size: 1.6rem;
+    }
+  }
+
+  .btn{
+    margin-top: 50px;
+  }
+
+  .form{
+    max-width: 510px;
+    margin: 0 auto;
+    margin-top: 24px;
+
+    &__item{
+      display: flex;
+
+      &:not(:first-child){
+        margin-top: 32px;
+      }
+
+      @include mq(sp){
+        display: block;
+      }
+    }
+
+    .contact__item_title{
+      flex: 0 1 100%;
+      background-color: rgba(62, 161, 209, 0.7);
+      font-size: 1.8rem;
+      color: $txt__sub_color;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      padding-left: 10px;
+      position: relative;
+
+      @include mq(sp){
+        width: fit-content;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      &::after{
+
+        @include mq(pc){
+
+          content: "";
+          display: block;
+          position: absolute;
+          top: 0;
+          right: -8px;
+          // 三角形の高さ分引いてあげないと要素が外に出ないので、注意する
+          border-style: solid;
+          border-width: 20px 0 20px 8px;
+          border-color: transparent transparent transparent rgba(62, 161, 209, 0.7);
+        }
+      }
+
+      span{
+        color: #E7728E;
+        font-size: 1.2rem;
+        vertical-align: super;
+        line-height: 1;
+      }
+    }
+
+    .contact__item_input{
+      flex: 0 0 320px;
+      margin-left: 18px;
+
+      @include mq(sp){
+        margin-left: 0;
+        margin-top: 3px;
+      }
+    }
+
+    .contact__radio{
+      position: relative;
+
+      &_wrap{
+        display: inline-flex;
+        border: 1px solid #fff;
+        border-radius: 1px;
+        box-shadow: 5px 6px 15px rgba(96, 96, 96, 0.16);
+      }
+
+      &_input{
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+
+        &:checked + .contact__radio_part{
+          //チェックされたradio要素の次の要素（法人と書かれたspanを指している）を指定しているので、チェックされた時のみ適用
+          background-color: $sub__ttl_under;
+          color: #fff;
+        }
+
+        &:focus + .contact__radio_part{
+          //チェックされたradio要素の次の要素（法人と書かれたspanを指している）を指定しているので、チェックされた時のみ適用
+          outline: -webkit-focus-ring-color auto 1px;
+        }
+      }
+
+      &_part{
+        display: block;
+        font-size: 1.6rem;
+        letter-spacing: .1;
+        color: $sub__ttl_under;
+        background-color: #fff;
+        height: 38px;
+        line-height: 38px;
+        width: 80px;
+        text-align: center;
+
+      }
+    }
+
+    input[type="name"],
+    input[type="email"],
+    textarea{
+      width: 100%;
+      font-size: 1.6rem;
+      padding: .2rem .5rem;
+      border: none;
+      box-shadow: 5px 6px 15px rgba(96, 96, 96, 0.16);
+      border-radius: 2px;
+    }
+
+    input[type="name"],
+    input[type="email"]{
+      height: 40px;
+    }
+
+    textarea{
+      min-height: 122px;
+      resize: vertical;
+    }
+
+  }
+
+  // ------------------------------------
+  // ------------------------------------
+
+  .privacy{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1.6rem;
+
+    .contact__privacy{
+      position: relative;
+      display: inline-block;
+      width: 22px;
+      height: 22px;
+
+
+      &_input{
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+
+        &:focus + .contact__privacy_part{
+          outline: -webkit-focus-ring-color auto 1px;
+        }
+        &:checked:focus + .contact__privacy_part{
+          outline: none;
+        }
+
+        &:checked + .contact__privacy_part{
+          border-top: 0;
+          border-left: 0;
+          width: 10px;
+          transform: rotate(45deg);
+          background: transparent;
+        }
+      }
+
+      &_part{
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+        border: 1px solid $sub__ttl_under;
+        background-color: #fff;
+        vertical-align: middle;
+
+
+      }
+    }
+
+
+    a{
+      display: inline-block;
+      text-decoration: underline;
+      color: #3EA1D1;
+    }
+  }
+
+  .end-message{
+    display: none;
+  }
+
+  .false-message{
+    display: none;
+  }
+}

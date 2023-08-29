@@ -1,0 +1,68 @@
+
+.concept{
+
+  .inner{
+
+    @include mq(sp){
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  .layout__2col{
+    display: flex;
+    align-items: center;
+    gap: 80px;
+
+    @include mq(sp){
+      display: block;
+    }
+
+    .img{
+      max-width: 100%;
+      max-height: 100%;
+
+      img{
+        width: 100%;
+      }
+    }
+
+    .txt__content{
+      @include mq(sp){
+      margin-top: 40px;
+      }
+
+      .ttl{
+        font-size: 2rem;
+        line-height: 1.7;
+
+      }
+
+      .txt{
+        margin-top: 48px;
+        font-size: 1.6rem;
+        line-height: 1.6;
+
+        @include mq(sp){
+        margin-top: 32px;
+        }
+      }
+    }
+  }
+}
+
+.concept2{
+  .img{
+    @include mq(pc){
+      order: 2;
+    }
+  }
+
+
+  .txt__content{
+    @include mq(pc){
+      order: 1;
+    }
+  }
+
+}

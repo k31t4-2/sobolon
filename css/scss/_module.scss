@@ -1,0 +1,123 @@
+
+.inner{
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 80px 40px;
+
+  @include mq(sp){
+  padding-top: 48px;
+  padding-bottom: 48px;
+  }
+}
+
+// header + footer
+.logo{
+  a{
+    display: block;
+    img{
+      width: 120px;
+      height: 21px;
+    }
+  }
+}
+
+// 全コンテンツサブタイトル
+
+.sub__title{
+
+  h2{
+    color: $txt__main_color;
+    font-size: 4rem;
+    text-transform: capitalize;
+    text-align: center;
+    position: relative;
+
+    &::after{
+      content: "";
+      display: block;
+      position: absolute;
+      left: 50%;
+      bottom: -16px;
+      transform: translate(-50%,-50%);
+      width: 60px;
+      height: 1px;
+      background-color: $sub__ttl_under;
+    }
+  }
+}
+
+.body__content{
+  margin-top: 80px;
+
+  @include mq(sp){
+    margin-top: 64px;
+  }
+}
+
+
+.btn{
+  text-align: center;
+
+  a{
+    display: inline-block;
+    padding: 16px 54px;
+    background-color: #fff;
+    border: solid 1px $btn__color;
+    font-size: 1.4rem;
+    color: $btn__color;
+    text-transform: uppercase;
+    margin: 0 auto;
+  }
+}
+
+// card型コンテンツ -----------------------------
+
+.card{
+  display: flex;
+  align-items: center;
+
+  @include mq(sp){
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__link{
+    display: block;
+    cursor: pointer;
+  }
+
+  .txt{
+    color: $txt__main_color;
+  }
+}
+
+// to-top--------------------------
+
+.to-top{
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+
+  background-color: #3EA1D1;
+  width: 60px;
+  height: 60px;
+
+  .border{
+    height: 100%;
+    cursor: pointer;
+    position: relative;
+
+    .triangle{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      border-style: solid;
+      border-width: 0 15px 26px 15px;
+      border-color: transparent transparent #fff transparent;
+    }
+  }
+}
+
+// contact

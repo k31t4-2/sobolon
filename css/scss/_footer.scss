@@ -1,0 +1,61 @@
+
+.footer{
+
+  a{
+
+    &:hover{
+      opacity: .7;
+    }
+
+  }
+
+  &__inner{
+    max-width: 1280px;
+    width: 100%;
+    padding: 48px 0 17px;
+    margin: 0 auto;
+  }
+
+  .body__content{
+    text-align: center;
+    margin-top: 0;
+  }
+
+  &__list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24px;
+    gap: 32px;
+
+    a{
+      font-size: 1.2rem;
+      color: $txt__main_color;
+    }
+
+  }
+
+  .sns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 36px;
+    gap: 44px;
+
+    .twitter,
+    .instagram,
+    .line{
+      font-size: 2.2rem;
+
+      a{
+
+        color: #3EA1D1;
+      }
+    }
+  }
+
+  .copyright{
+    margin-top: 24px;
+    color: $blog__txt;
+  }
+}

@@ -1,0 +1,128 @@
+
+
+// feature-content ============================
+
+.feature{
+
+  .card{
+
+    &__item{
+      max-width: 340px;
+      width: 100%;
+      background-color: #fff;
+      box-shadow: 3px 3px 15px #60606029;
+      overflow: hidden;
+
+      &:hover img{
+        transform: scale(1.1);
+        transition: .6s;
+      }
+
+      &:not(:first-child){
+        margin-left: 90px;
+
+        @include mq(sp){
+        margin-left: auto;
+        margin-top: 48px;
+        }
+      }
+
+      @include mq(sp){
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+    }
+
+    &__link{
+      display: block;
+
+
+      img{
+        max-width: 340px;
+        width: 100%;
+        max-height: 240px;
+        height: 100%;
+      }
+
+      p{
+        font-size: 1.6rem;
+        line-height: 1.6;
+        text-align: center;
+        padding: 32px 0px;
+        color: $txt__main_color;
+      }
+    }
+
+  }// card
+}
+
+// feature__bgimg =========================
+
+.feature__bg{
+  margin: 80px 0px;
+
+  @include mq(sp){
+    margin-top: 48px;
+  }
+
+  &img{
+    position: relative;
+
+    @include mq(pc){
+      background-image: url(/img/PC/bg.png);
+      padding-top: 37%;
+    }
+
+    @include mq(sp){
+      background-image: url(/img/SP/bg.png);
+      padding-top: 128%;
+    }
+
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    color: $txt__sub_color;
+
+
+    .txt__box{
+      line-height: 1.6;
+
+      @include mq(pc){
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 40px;
+        transform: translateY(-50%);
+      }
+
+
+      @include mq(sp){
+        display: block;
+        position: absolute;
+        right: 15px;
+        left: 15px;
+        bottom: 55px;
+      }
+
+      .ttl{
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+
+        @include mq(sp){
+        font-size: 2rem;
+        margin-bottom: 32px;
+        }
+      }
+
+      .txt{
+        font-size: 1.6rem;
+
+        @include mq(sp){
+          font-size: 1.4rem;
+        }
+      }
+    }
+
+  }
+}
