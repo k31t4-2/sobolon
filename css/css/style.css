@@ -843,9 +843,21 @@ a {
   min-height: 122px;
   resize: vertical;
 }
+.contact .submit {
+  text-align: center;
+}
+.contact .submit-btn {
+  border: none;
+  font-size: 1.8rem;
+  padding: 1rem 5rem;
+  border: none;
+  background-color: rgba(62, 161, 209, 0.7);
+  color: #ffffff;
+  border-radius: 25px;
+}
 .contact .privacy {
   text-align: center;
-  margin-top: 50px;
+  margin: 50px 0 30px;
   font-size: 1.6rem;
 }
 .contact .privacy .contact__privacy {
