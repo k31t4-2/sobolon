@@ -70,12 +70,12 @@
     position: relative;
 
     @include mq(pc){
-      background-image: url(/img/PC/bg.png);
+      background-image: url(img/PC/bg.png);
       padding-top: 37%;
     }
 
     @include mq(sp){
-      background-image: url(/img/SP/bg.png);
+      background-image: url(img/SP/bg.png);
       padding-top: 128%;
     }
 
